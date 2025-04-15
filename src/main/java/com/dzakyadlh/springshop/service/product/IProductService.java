@@ -1,5 +1,6 @@
 package com.dzakyadlh.springshop.service.product;
 
+import com.dzakyadlh.springshop.dto.ProductDto;
 import com.dzakyadlh.springshop.model.Product;
 
 import java.util.List;
@@ -26,4 +27,8 @@ public interface IProductService {
     List<Product> getProductsByBrandAndName(String brand, String name);
 
     Long countProductsByBrandAndName(String brand, String name);
+
+    List<ProductDto> getConvertedProducts(List<Product> products);
+
+    ProductDto convertToDto(Product product);
 }
